@@ -13,8 +13,15 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "B Land | Modern Study Solutions",
-  description: "A modern, illustrative study room management system designed for focus and productivity.",
+  title: "Sage OS | Study Room Management",
+  description: "Spatial Intelligence for Study Rooms — real-time telemetry, visual seat allocation, and study space management.",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({

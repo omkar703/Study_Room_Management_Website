@@ -7,7 +7,7 @@ import { OrbitControls } from "@react-three/drei";
 import { Users, Layers, Zap, ChevronRight, BarChart3, ShieldCheck, Box, Grid, Play } from "lucide-react";
 import Link from "next/link";
 import { PremiumRoomScene } from "@/components/RoomScene";
-import { AuroraBackground, Room3DCanvas } from "@/components/Shared";
+import { AuroraBackground, Room3DCanvas, StudyRoomLogo } from "@/components/Shared";
 import { Blueprint2D, BlueprintSmartModal } from "@/components/Blueprint2D";
 import { SeatData, SeatStatus } from "@/components/MassiveRoomScene";
 import type { Variants } from "framer-motion";
@@ -35,10 +35,8 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
-        <div className="flex items-center gap-2 cursor-pointer group">
-          <div className="w-8 h-8 rounded-[10px] bg-gradient-to-br from-primary to-accent-cyan flex items-center justify-center text-white font-display font-bold shadow-lg shadow-primary/20 group-hover:shadow-primary/40 transition-shadow duration-300">
-            S
-          </div>
+        <div className="flex items-center gap-2.5 cursor-pointer group">
+          <StudyRoomLogo />
           <span className="font-display text-lg font-bold tracking-tight text-foreground">
             Sage<span className="text-text-tertiary">.os</span>
           </span>
@@ -46,7 +44,7 @@ const Navbar = () => {
 
         {/* Links */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-text-secondary">
-          {["Platform", "Visualization", "Workflow"].map((l) => (
+          {["Platform", "Visualization"].map((l) => (
             <a key={l} href={`#${l.toLowerCase()}`} className="hover:text-foreground transition-colors">{l}</a>
           ))}
         </div>
@@ -75,17 +73,6 @@ const Hero = () => (
         initial="hidden" animate="show" variants={{ show: { transition: { staggerChildren: 0.12 } } }}
         className="flex flex-col items-start gap-7 lg:pt-16"
       >
-        <motion.div
-          variants={fadeUp}
-          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-panel text-xs font-semibold text-primary tracking-wide"
-        >
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
-          </span>
-          SAGE OS 2.0 — NOW LIVE
-        </motion.div>
-
         <motion.h1
           variants={fadeUp}
           className="text-6xl md:text-7xl xl:text-8xl font-display font-bold leading-[1.05] tracking-tight text-foreground"
@@ -439,8 +426,8 @@ const Footer = () => (
   <footer className="relative z-10 border-t border-surface-border bg-white/50 backdrop-blur-xl pt-16 pb-10">
     <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start gap-12 mb-16">
       <div className="flex flex-col gap-5 max-w-xs">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-[10px] bg-foreground flex items-center justify-center text-white font-display text-sm font-bold">S</div>
+        <div className="flex items-center gap-2.5">
+          <StudyRoomLogo />
           <span className="font-display text-xl font-bold text-foreground tracking-tight">Sage.os</span>
         </div>
         <p className="text-sm text-text-secondary font-light leading-relaxed">

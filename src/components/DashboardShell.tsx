@@ -17,7 +17,7 @@ import {
   X,
   ChevronRight
 } from "lucide-react";
-import { AuroraBackground } from "./Shared";
+import { AuroraBackground, StudyRoomLogo } from "./Shared";
 
 const navigation = [
   { name: "Overview", href: "/dashboard", icon: LayoutDashboard },
@@ -38,9 +38,7 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
       {/* Desktop Sidebar */}
       <aside className="hidden lg:flex flex-col w-64 h-screen fixed left-0 top-0 z-40 border-r border-white/50 bg-white/40 backdrop-blur-3xl shadow-[4px_0_24px_rgba(0,0,0,0.02)]">
         <div className="p-6 flex items-center gap-3">
-          <div className="w-8 h-8 rounded-[10px] bg-gradient-to-br from-primary to-accent-cyan flex items-center justify-center text-white font-display font-bold shadow-md shadow-primary/20">
-            S
-          </div>
+          <StudyRoomLogo />
           <span className="font-display font-bold tracking-tight">
             Sage<span className="text-text-tertiary">.os</span>
           </span>
@@ -154,9 +152,7 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
             >
               <div className="p-4 flex justify-between items-center border-b border-surface-border">
                 <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-[10px] bg-gradient-to-br from-primary to-accent-cyan flex items-center justify-center text-white font-display font-bold shadow-md shadow-primary/20">
-                    S
-                  </div>
+                  <StudyRoomLogo />
                   <span className="font-display font-bold tracking-tight">Sage.os</span>
                 </div>
                 <button onClick={() => setMobileMenuOpen(false)} className="p-2 text-text-secondary hover:text-foreground bg-slate-100 rounded-full">

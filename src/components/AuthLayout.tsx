@@ -2,7 +2,7 @@
 
 import React, { Suspense } from "react";
 import { motion } from "framer-motion";
-import { AuroraBackground, Room3DCanvas } from "@/components/Shared";
+import { AuroraBackground, Room3DCanvas, StudyRoomLogo } from "@/components/Shared";
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 
@@ -17,9 +17,7 @@ export function AuthLayout({ children, title, subtitle }: { children: React.Reac
         {/* Brand/Nav */}
         <div className="flex justify-between items-center z-20">
           <Link href="/" className="flex items-center gap-2 group cursor-pointer">
-            <div className="w-8 h-8 rounded-[10px] bg-gradient-to-br from-primary to-accent-cyan flex items-center justify-center text-white font-display font-bold shadow-lg shadow-primary/20 group-hover:shadow-primary/40 transition-shadow duration-300">
-              S
-            </div>
+            <StudyRoomLogo />
             <span className="font-display text-lg font-bold tracking-tight text-foreground">
               Sage<span className="text-text-tertiary">.os</span>
             </span>
@@ -60,9 +58,7 @@ export function AuthLayout({ children, title, subtitle }: { children: React.Reac
       <div className="w-full lg:w-[45%] flex items-center justify-center p-6 sm:p-12 z-10">
          {/* Mobile Nav */}
          <Link href="/" className="lg:hidden absolute top-6 left-6 flex items-center gap-2 z-20">
-            <div className="w-8 h-8 rounded-[10px] bg-gradient-to-br from-primary to-accent-cyan flex items-center justify-center text-white font-display font-bold shadow-sm">
-              S
-            </div>
+            <StudyRoomLogo />
          </Link>
 
          <motion.div 

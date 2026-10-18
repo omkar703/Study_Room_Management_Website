@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="sage-bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="65%" stop-color="#4338CA" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+
+    <!-- Ambient Lamp Light Beam -->
+    <linearGradient id="sage-lamp-beam" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.32" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.04" />
+    </linearGradient>
+
+    <!-- Subtle Glass Edge -->
+    <linearGradient id="sage-edge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.08" />
+    </linearGradient>
+  </defs>
+
+  <!-- Modern App Squircle -->
+  <rect width="64" height="64" rx="16" fill="url(#sage-bg-grad)" />
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="15.25" stroke="url(#sage-edge)" stroke-width="1.5" />
+
+  <!-- Lamp Ambient Focus Cone shining down onto book/desk -->
+  <polygon points="37,23 20,44 48,44" fill="url(#sage-lamp-beam)" />
+
+  <!-- Study Desk Surface -->
+  <rect x="13" y="44" width="38" height="3" rx="1.5" fill="#FFFFFF" fill-opacity="0.95" />
+
+  <!-- Open Study Book -->
+  <path d="M25 41 C27.5 39.5 29.8 39.8 32 41 C34.2 39.8 36.5 39.5 39 41 V36.2 C36.5 34.7 34.2 35 32 36.2 C29.8 35 27.5 34.7 25 36.2 Z" fill="#FFFFFF" />
+  <line x1="32" y1="36.2" x2="32" y2="41" stroke="#4F46E5" stroke-width="0.8" stroke-linecap="round" />
+
+  <!-- Study Desk Lamp -->
+  <!-- Lamp Base -->
+  <rect x="17.5" y="42" width="6" height="2" rx="1" fill="#FFFFFF" fill-opacity="0.9" />
+  <!-- Lamp Arm (Stem) -->
+  <path d="M20.5 42 V28 C20.5 20.5 27.5 17 35 19.5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Lamp Head / Shade -->
+  <polygon points="32,17 40.5,22 36.5,25.5 29.5,20.5" fill="#FFFFFF" />
+  <!-- Focus Light Bulb -->
+  <circle cx="36" cy="23" r="1.6" fill="#38BDF8" />
+
+  <!-- Spatial Room Focus Signals / Nodes -->
+  <circle cx="47" cy="18" r="1.5" fill="#FFFFFF" fill-opacity="0.55" />
+  <circle cx="50" cy="22" r="1" fill="#FFFFFF" fill-opacity="0.35" />
+</svg>
